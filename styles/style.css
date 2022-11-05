@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  width: auto;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+
+#prev{
+  visibility: hidden;
+}
+
+#counter {
+  display: flex;
+  margin-top: 250px;
+  height: 20px;
+  justify-content: center;
+}
+
+#questions {
+  margin-left: 200px;
+  margin-right: 200px;
+  text-align: center;
+}
+
+#choiceOptions {
+  vertical-align: middle;
+}
+
+.questionHeader {
+  margin-bottom: 20px;
+}
+
+.questionOption {
+  margin-top: 35px;
+  font-weight: normal;
+}
+
+#restart{
+  visibility: hidden;
+  margin: 0 auto;
+  position:absolute; 
+  bottom:0;
+  margin-bottom: 420px;
+}
+
+.wrapper .icon {
+  position: relative;
+  background: #ffffff;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #ffffff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .button:hover,
+.wrapper .button:hover .tooltip,
+.wrapper .button:hover .tooltip::before {
+  background: #0e0e0e;
+  color: #ffffff;
+}
