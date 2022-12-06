@@ -315,7 +315,7 @@ const displayOptions = (questionDisplay, optionsDisplay) => {
 }
 
 const collectUserAnswer = () => {
-  choice = document.getElementsByName('quiz_questions' + count);
+  const choice = document.getElementsByName('quiz_questions' + count);
   for (let i = 0; i < choice.length; i++) {
     if (choice[i].checked) {
       userAnswers[count] = choice[i].value;
